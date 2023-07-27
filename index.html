@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
+
 <body>
     <div class="header">
         <h1 style="color: aliceblue;">I make this just for you</h1>
@@ -18,28 +19,13 @@
         </p>
     </div>
     
-
     <div class="heart">
         <img src="crabby-fotor.png"/>
     </div>
 
-    <script>
-        document.addEventListener("mousemove", function(e){
-            const body = document.querySelector('body');
-            const heartMouse = document.createElement('span');
-            heartMouse.setAttribute('id', 'heartMosue');
-            const x = e.offsetX;
-            const y = e.offsetY;
-            heartMouse.style.left = x + 'px';
-            heartMouse.style.top = y + 'px';
+    <div class="footer">By <a href="https://github.com/huynhat30">Huy Giang <i class="fa fa-github"></i></a></div>
 
-            body.appendChild(heartMouse);
-
-            setTimeout(() => {
-                heartMouse.remove();
-            }, 1000);
-        })
-    </script>
-
+    <script src="app.js"></script>
+    
 </body>
 </html>

@@ -61,6 +61,20 @@ align-items: center;
     box-shadow: -10px 10px 90px #f20044;
     animation: heart 0.8s linear infinite;
 }
+
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.09);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1);
+    }
+
+}
+
 .heart::before {
     top: -50%;  
     box-shadow: -10px -10px 90px #f20044;
@@ -84,26 +98,11 @@ align-items: center;
     width: 100%;
     height:100%;
     transform: rotate(45deg);
+    position: absolute;
+    z-index: 1;
     animation: fadeInAnimation ease 15s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-}
-
-#heartMosue {
-    
-}
-
-@keyframes heart {
-    0%{
-        transform: rotate(-45deg) scale(1.09);
-    }
-    80%{
-        transform: rotate(-45deg) scale(1.0);
-    }
-    100%{
-        transform: rotate(-45deg) scale(1);
-    }
-
 }
 
 @keyframes fadeInAnimation {
@@ -114,3 +113,56 @@ align-items: center;
         opacity: 1;
      }
 }
+
+#heartMosue {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+    animation: fadeInOut 1s  linear infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100%{
+        opacity: 0;
+    }
+    20%, 80%{
+        opacity: 1;
+    }
+}
+
+#heartMosue::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(heartMouse.png);
+    background-size: cover;
+    animation: moveShape 1s  linear infinite;
+}
+
+@keyframes moveShape {
+    0% {
+        transform: translate(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(300px) rotate(360deg);
+    }
+}
+
+.footer {
+    position:absolute;
+    width: auto;
+    font-size: 0.8em;
+    bottom: 200px;
+    color: wheat;
+    text-align: center;
+  }
+  .footer a {
+    font-weight: 500;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
