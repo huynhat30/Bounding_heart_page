@@ -7,6 +7,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {  
@@ -14,12 +15,10 @@ body {
  height: 100vh ;
  width: 100vw;
  display: block;
- overflow: hidden;
 } 
 .wrapper {
     padding: auto;
-    display: flex;
-    flex-direction: column;
+    display: block;
 }
 .header {
     position: relative;
@@ -165,3 +164,16 @@ body {
     color: whitesmoke;
   }
 
+  @media only screen and (max-width: 768px) {
+    .heartWrapper{
+        padding-top: 30px;
+        margin-top: 10%;
+        margin-bottom: auto;
+    }
+
+    .footer {
+        padding-top: 30px;
+        margin-top: 10%;
+        margin-bottom: auto;
+    }
+  }
