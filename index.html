@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Crabby</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+    <div class="header">
+        <h1 style="color: aliceblue;">I make this just for you</h1>
+        <p id="target"><i class="fa fa-heart-o" style="font-size:48px;color:red"></i>
+            <span id="name">Crabby</span>
+            <i class="fa fa-heart-o" style="font-size:48px;color:red"></i>
+        </p>
+    </div>
+    
+
+    <div class="heart">
+        <img src="crabby-fotor.png"/>
+    </div>
+
+    <script>
+        document.addEventListener("mousemove", function(e){
+            const body = document.querySelector('body');
+            const heartMouse = document.createElement('span');
+            heartMouse.setAttribute('id', 'heartMosue');
+            const x = e.offsetX;
+            const y = e.offsetY;
+            heartMouse.style.left = x + 'px';
+            heartMouse.style.top = y + 'px';
+
+            body.appendChild(heartMouse);
+
+            setTimeout(() => {
+                heartMouse.remove();
+            }, 1000);
+        })
+    </script>
+
+</body>
+</html>
